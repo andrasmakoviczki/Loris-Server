@@ -9,7 +9,7 @@ import javax.jws.WebService;
 import org.elte.hadoop.loris.server.services.HadoopFile;
 import org.elte.hadoop.loris.server.services.WordCount2;
 
-@WebService(endpointInterface = "org.elte.hadoop.loris.server.MyService")
+@WebService(endpointInterface = "org.elte.hadoop.loris.servers.MyService")
 public class MyServiceImpl implements MyService {
 	
     public String reverser(String value) {
