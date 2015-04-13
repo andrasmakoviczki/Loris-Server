@@ -1,7 +1,5 @@
 package org.elte.hadoop.loris.server.services;
 
-import java.security.PrivilegedExceptionAction;
-
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.LocatedFileStatus;
