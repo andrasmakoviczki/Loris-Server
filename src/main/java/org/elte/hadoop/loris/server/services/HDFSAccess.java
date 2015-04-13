@@ -10,7 +10,7 @@ import org.apache.hadoop.security.UserGroupInformation;
 import org.apache.log4j.Logger;
 
 public class HDFSAccess {
-	Logger logger = Logger.getLogger(HDFSAccess.class);
+	//Logger logger = Logger.getLogger(HDFSAccess.class);
 
 	public HDFSAccess() {
 		String myHadoopIp = new String("172.31.14.253");
