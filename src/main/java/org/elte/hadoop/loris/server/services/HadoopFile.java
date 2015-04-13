@@ -28,7 +28,7 @@ public class HadoopFile {
 			FileSystem fs = FileSystem.get(conf);
 			
 			//list
-			RemoteIterator<LocatedFileStatus> fileStatusListIterator = fs
+			/*RemoteIterator<LocatedFileStatus> fileStatusListIterator = fs
 					.listFiles(new Path(
 							"hdfs://172.31.14.253:8020/user/ubuntu"),
 							true);
@@ -50,7 +50,7 @@ public class HadoopFile {
 	                System.out.println(line);
 	                line=br.readLine();
 	                cont.add(line);
-	        } 
+	        } */
 
 	    	}catch(Exception e){
 	    		e.printStackTrace();
