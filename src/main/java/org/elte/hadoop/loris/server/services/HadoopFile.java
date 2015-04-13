@@ -25,14 +25,14 @@ public class HadoopFile {
 			Configuration conf = new Configuration();
 			Job.getInstance(conf);
 			conf.set("hadoop.job.ugi", "ubuntu");
-			conf.set("fs.defaultFS", "hdfs://172.31.14.253:8020");
+			conf.set("fs.defaultFS", "hdfs://localhost:8020");
 			
 			FileSystem fs = FileSystem.get(conf);
 			
 			//list
 			RemoteIterator<LocatedFileStatus> fileStatusListIterator = fs
 					.listFiles(new Path(
-							"hdfs://172.31.14.253:8020/user/ubuntu"),
+							"hdfs://localhost:8020/user/ubuntu"),
 							true);
 			
 			while (fileStatusListIterator.hasNext()) {
