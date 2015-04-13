@@ -10,7 +10,7 @@ import org.apache.hadoop.security.UserGroupInformation;
 import org.apache.log4j.Logger;
 
 public class HDFSAccess {
-	//Logger logger = Logger.getLogger(HDFSAccess.class);
+	Logger logger = Logger.getLogger(HDFSAccess.class);
 
 	public HDFSAccess() {
 		String myHadoopIp = new String("172.31.14.253");
@@ -26,10 +26,10 @@ public class HDFSAccess {
 			RemoteIterator<LocatedFileStatus> fileStatusListIterator = fs
 					.listFiles(new Path("hdfs://" + myHadoopIp
 							+ ":8020/"), true);
-			while (fileStatusListIterator.hasNext()) {
+			/*while (fileStatusListIterator.hasNext()) {
 				LocatedFileStatus fileStatus = fileStatusListIterator.next();
 				System.out.println(fileStatus.getPath());
-			}
+			}*/
 			
 		} catch (Exception e) {
 			e.printStackTrace();
