@@ -15,13 +15,13 @@ import org.apache.log4j.Logger;
 
 public class HadoopFile {
 	
-	Logger logger = Logger.getLogger(HadoopFile.class);
+	//Logger logger = Logger.getLogger(HadoopFile.class);
 	
 	public void hdfsls(ArrayList<String> al, String in, List<String> cont)
 	{
 		String line = new String();
 		
-		/*try{
+		try{
 			Configuration conf = new Configuration();
 			Job.getInstance(conf);
 			conf.set("hadoop.job.ugi", "ubuntu");
@@ -56,6 +56,6 @@ public class HadoopFile {
 
 	    	}catch(Exception e){
 	    		e.printStackTrace();
-	    	}*/
+	    	}
 	}
 }
