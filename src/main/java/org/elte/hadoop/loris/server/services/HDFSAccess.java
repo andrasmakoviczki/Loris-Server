@@ -26,6 +26,7 @@ public class HDFSAccess {
 			RemoteIterator<LocatedFileStatus> fileStatusListIterator = fs
 					.listFiles(new Path("hdfs://" + myHadoopIp
 							+ ":8020/"), true);
+			
 			/*while (fileStatusListIterator.hasNext()) {
 				LocatedFileStatus fileStatus = fileStatusListIterator.next();
 				System.out.println(fileStatus.getPath());

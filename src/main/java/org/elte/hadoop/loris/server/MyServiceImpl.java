@@ -26,7 +26,7 @@ public class MyServiceImpl implements MyService {
     	
     	h.hdfsls(al,s,cont);
     	
-    	al.add("Hello");
+    	//al.add("Hello");
     	
     	return al;
     }
