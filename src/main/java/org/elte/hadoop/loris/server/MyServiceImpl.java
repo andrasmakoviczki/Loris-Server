@@ -20,10 +20,10 @@ public class MyServiceImpl implements MyService {
     public ArrayList<String> hadoop()
     {
     	ArrayList<String> al = new ArrayList<String>();
-    	//string line = new String("nothing");
     	String s = null;
     	List<String> cont = null;
     	HadoopFile h = new HadoopFile();
+    	
     	h.hdfsls(al,s,cont);
     	
     	return al;

@@ -24,28 +24,27 @@ public class HadoopFile {
 			Job.getInstance(conf);
 			conf.set("hadoop.job.ugi", "ubuntu");
 			conf.set("fs.defaultFS", "hdfs://localhost:9000");
-
+			
 			FileSystem fs = FileSystem.get(conf);
-
+			
+			//list
 			RemoteIterator<LocatedFileStatus> fileStatusListIterator = fs
 					.listFiles(new Path(
 							"hdfs://localhost:9000/user/ubuntu"),
 							true);
 			
-			
 			while (fileStatusListIterator.hasNext()) {
 				LocatedFileStatus fileStatus = fileStatusListIterator
 						.next();
 				al.add(fileStatus.getPath().toString());
-				//System.out.println(fileStatus.getPath());
 			}
 			
+			//content
 			Path pt=new Path(in);
 	        BufferedReader br=new BufferedReader(new InputStreamReader(fs.open(pt)));
 	        
 	        line=br.readLine();
 	        cont.add(line);
-	        
 	        
 	        while (line != null){
 	                System.out.println(line);
