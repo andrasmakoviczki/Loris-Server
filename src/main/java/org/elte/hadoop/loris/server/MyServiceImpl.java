@@ -20,11 +20,11 @@ public class MyServiceImpl implements MyService {
     public ArrayList<String> hadoop()
     {
     	ArrayList<String> al = new ArrayList<String>();
-    	/*String s = null;
+    	String s = null;
     	List<String> cont = null;
     	HadoopFile h = new HadoopFile();
     	
-    	h.hdfsls(al,s,cont);*/
+    	h.hdfsls(al,s,cont);
     	
     	al.add("Hello");
     	
