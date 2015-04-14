@@ -2,6 +2,7 @@ package org.elte.hadoop.loris.server;
 
 
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -42,13 +43,10 @@ public class MyServiceImpl implements MyService {
     	String filename = new String("book");
     	String appender = new String("/part-r-00000");
     	
-    	Calendar now = Calendar.getInstance();
-    	Date date = null;
-		now.setTime(date);
-		Integer currenttime = now.get(Calendar.DATE);
+    	String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
     	
     	String in = new String("hdfs://localhost:9000/user/ubuntu/" + filename);
-    	String out = new String("hdfs://localhost:9000/user/ubuntu/" + filename + "_out" + currenttime.toString());
+    	String out = new String("hdfs://localhost:9000/user/ubuntu/" + filename + "_out" + timeStamp);
 
     	List<String> cont = new ArrayList<String>();
     	HadoopFile h = new HadoopFile();
