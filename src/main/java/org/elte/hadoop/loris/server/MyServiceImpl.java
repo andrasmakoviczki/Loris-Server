@@ -40,13 +40,16 @@ public class MyServiceImpl implements MyService {
     {
     	ArrayList<String> al = new ArrayList<String>();
     	
+    	String ip = new String("172.31.14.253");
+		String port = new String("8020");
+    	
     	String filename = new String("book");
     	String appender = new String("/part-r-00000");
     	
     	String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
     	
-    	String in = new String("hdfs://localhost:9000/user/ubuntu/" + filename);
-    	String out = new String("hdfs://localhost:9000/user/ubuntu/" + filename + "_out" + timeStamp);
+    	String in = new String("hdfs://"+ip+":"+port+"/user/ubuntu/" + filename);
+    	String out = new String("hdfs://"+ip+":"+port+"/user/ubuntu/" + filename + "_out" + timeStamp);
 
     	List<String> cont = new ArrayList<String>();
     	HadoopFile h = new HadoopFile();
