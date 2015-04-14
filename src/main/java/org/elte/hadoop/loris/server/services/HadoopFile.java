@@ -24,7 +24,7 @@ public class HadoopFile {
 		line = "OK";
 		System.out.print(line);
 		
-		try{
+		/*try{
 			Configuration conf = new Configuration();
 			Job.getInstance(conf);
 			conf.set("hadoop.job.ugi", "ubuntu");
@@ -59,6 +59,6 @@ public class HadoopFile {
 
 	    	}catch(Exception e){
 	    		e.printStackTrace();
-	    	}
+	    	}*/
 	}
 }
