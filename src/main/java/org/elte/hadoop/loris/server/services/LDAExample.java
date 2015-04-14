@@ -30,7 +30,7 @@ public class LDAExample {
 
 	JavaSparkContext sc = new JavaSparkContext(conf);
 
-	String path = "resources/lda_data.txt";
+	/*String path = "resources/lda_data.txt";
 	
 	JavaRDD<String> data = sc.textFile(path);
 	         JavaRDD<Vector> parsedData = data.map(
@@ -77,7 +77,7 @@ public class LDAExample {
             System.out.print(" " + topics.apply(word, topic));
           }
           System.out.println();
-        }
+        }*/
         
 	sc.stop();
 		} catch (Exception e) {
