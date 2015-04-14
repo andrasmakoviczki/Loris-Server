@@ -15,7 +15,7 @@ import org.apache.log4j.Logger;
 
 public class HadoopFile {
 	
-	Logger logger = Logger.getLogger(HadoopFile.class);
+	Logger logger = Logger.getLogger(org.elte.hadoop.loris.server.services.HadoopFile.class);
 	
 	public void hdfsls(ArrayList<String> al, String in, List<String> cont)
 	{
