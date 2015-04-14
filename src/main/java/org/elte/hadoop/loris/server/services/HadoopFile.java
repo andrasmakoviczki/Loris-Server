@@ -11,6 +11,7 @@ import org.apache.hadoop.fs.LocatedFileStatus;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.fs.RemoteIterator;
 import org.apache.hadoop.mapreduce.Job;
+
 import org.apache.log4j.Logger;
 
 public class HadoopFile {
@@ -20,8 +21,10 @@ public class HadoopFile {
 	public void hdfsls(ArrayList<String> al, String in, List<String> cont)
 	{
 		String line = new String();
+		line = "OK";
+		System.out.print(line);
 		
-		/*try{
+		try{
 			Configuration conf = new Configuration();
 			Job.getInstance(conf);
 			conf.set("hadoop.job.ugi", "ubuntu");
@@ -56,6 +59,6 @@ public class HadoopFile {
 
 	    	}catch(Exception e){
 	    		e.printStackTrace();
-	    	}*/
+	    	}
 	}
 }
