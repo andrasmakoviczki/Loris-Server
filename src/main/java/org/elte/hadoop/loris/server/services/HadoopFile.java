@@ -36,7 +36,7 @@ public class HadoopFile {
 			FileSystem fs = FileSystem.get(conf);
 			
 			//list
-			RemoteIterator<LocatedFileStatus> fileStatusListIterator = fs
+			/*RemoteIterator<LocatedFileStatus> fileStatusListIterator = fs
 					.listFiles(new Path(
 							"hdfs://" + ip + ":" + port + "/user/ubuntu"),
 							true);
@@ -45,10 +45,10 @@ public class HadoopFile {
 				LocatedFileStatus fileStatus = fileStatusListIterator
 						.next();
 				al.add(fileStatus.getPath().toString());
-			}
+			}*/
 			
 			//content
-			/*Path pt=new Path(in);
+			Path pt=new Path(in);
 	        BufferedReader br=new BufferedReader(new InputStreamReader(fs.open(pt)));
 	        
 	        line=br.readLine();
@@ -58,7 +58,7 @@ public class HadoopFile {
 	                System.out.println(line);
 	                line=br.readLine();
 	                cont.add(line);
-	        } */
+	        }
 
 	    	}catch(Exception e){
 	    		e.printStackTrace();
