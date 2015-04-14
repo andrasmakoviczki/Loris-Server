@@ -1,7 +1,10 @@
 package org.elte.hadoop.loris.server;
 
 
+import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import javax.jws.WebService;
@@ -31,15 +34,21 @@ public class MyServiceImpl implements MyService {
     	return al;
     }
     
+    //WordCount
     public List<String> hadoopContent()
     {
     	ArrayList<String> al = new ArrayList<String>();
     	
-    	String filename = new String("hello_text");
+    	String filename = new String("book");
     	String appender = new String("/part-r-00000");
     	
+    	Calendar now = Calendar.getInstance();
+    	Date date = null;
+		now.setTime(date);
+		Integer currenttime = now.get(Calendar.DATE);
+    	
     	String in = new String("hdfs://localhost:9000/user/ubuntu/" + filename);
-    	String out = new String("hdfs://localhost:9000/user/ubuntu/" + filename + "_out");
+    	String out = new String("hdfs://localhost:9000/user/ubuntu/" + filename + "_out" + currenttime.toString());
 
     	List<String> cont = new ArrayList<String>();
     	HadoopFile h = new HadoopFile();

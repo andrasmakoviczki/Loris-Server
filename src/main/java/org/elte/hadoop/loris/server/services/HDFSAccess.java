@@ -27,10 +27,10 @@ public class HDFSAccess {
 					.listFiles(new Path("hdfs://" + myHadoopIp
 							+ ":8020/"), true);
 			
-			/*while (fileStatusListIterator.hasNext()) {
+			while (fileStatusListIterator.hasNext()) {
 				LocatedFileStatus fileStatus = fileStatusListIterator.next();
 				System.out.println(fileStatus.getPath());
-			}*/
+			}
 			
 		} catch (Exception e) {
 			e.printStackTrace();

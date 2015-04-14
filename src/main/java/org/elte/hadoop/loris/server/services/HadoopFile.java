@@ -46,7 +46,7 @@ public class HadoopFile {
 			}
 			
 			//content
-			Path pt=new Path(in);
+			/*Path pt=new Path(in);
 	        BufferedReader br=new BufferedReader(new InputStreamReader(fs.open(pt)));
 	        
 	        line=br.readLine();
@@ -56,7 +56,7 @@ public class HadoopFile {
 	                System.out.println(line);
 	                line=br.readLine();
 	                cont.add(line);
-	        } 
+	        } */
 
 	    	}catch(Exception e){
 	    		e.printStackTrace();
