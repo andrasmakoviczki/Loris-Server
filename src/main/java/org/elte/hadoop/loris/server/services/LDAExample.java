@@ -20,28 +20,20 @@ import scala.collection.Seq;
 
 public class LDAExample {
 	public LDAExample() {
-		//try {
+	try {
+	String ip = new String("172.31.14.253");
+	String port = new String("7077");	
 		
-	System.out.println(LDAExample.class.getProtectionDomain().getCodeSource().getLocation().getFile());
-	
 	SparkConf conf = new SparkConf()
 			.setAppName("LDA example")
-			.setMaster("spark://52.17.26.216:7077");
-			//.setExecutorEnv("SPARK_USER", "ubuntu")
-			//.setJars(new String[] { "/loris/target/loris-0.0.1-SNAPSHOT.jar" });
+			.setMaster("spark://"+ip+":"+port+"");
 
-	//System.err.println(conf.getenv("SPARK_USER"));
-	
-	/*for (Iterator<Tuple2<String, String>> i = conf.getExecutorEnv().iterator(); i.hasNext();) {
-		
-		System.out.println(i.next()._1 + " " + i.next()._2 + "\n");
-	}*/
 	JavaSparkContext sc = new JavaSparkContext(conf);
 
-	/*String path = "resources/lda_data.txt";
+	String path = "resources/lda_data.txt";
 	
 	JavaRDD<String> data = sc.textFile(path);
-	JavaRDD<Vector> parsedData = data.map(
+	         JavaRDD<Vector> parsedData = data.map(
 			new Function<String,Vector>()
 			{
 				//call?
@@ -85,11 +77,11 @@ public class LDAExample {
             System.out.print(" " + topics.apply(word, topic));
           }
           System.out.println();
-        }*/
+        }
         
 	sc.stop();
-		/*} catch (Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
-		}*/
+		}
 }
 }
