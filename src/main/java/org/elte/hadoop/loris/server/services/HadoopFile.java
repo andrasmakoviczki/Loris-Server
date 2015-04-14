@@ -12,7 +12,6 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.fs.RemoteIterator;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.log4j.Logger;
-//import org.apache.log4j.Logger;
 
 public class HadoopFile {
 	
@@ -22,7 +21,7 @@ public class HadoopFile {
 	{
 		String line = new String();
 		
-		try{
+		/*try{
 			Configuration conf = new Configuration();
 			Job.getInstance(conf);
 			conf.set("hadoop.job.ugi", "ubuntu");
@@ -57,6 +56,6 @@ public class HadoopFile {
 
 	    	}catch(Exception e){
 	    		e.printStackTrace();
-	    	}
+	    	}*/
 	}
 }
