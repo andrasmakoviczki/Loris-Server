@@ -11,11 +11,12 @@ import org.apache.hadoop.fs.LocatedFileStatus;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.fs.RemoteIterator;
 import org.apache.hadoop.mapreduce.Job;
+import org.apache.log4j.Logger;
 //import org.apache.log4j.Logger;
 
 public class HadoopFile {
 	
-	//Logger logger = Logger.getLogger(HadoopFile.class);
+	Logger logger = Logger.getLogger(HadoopFile.class);
 	
 	public void hdfsls(ArrayList<String> al, String in, List<String> cont)
 	{

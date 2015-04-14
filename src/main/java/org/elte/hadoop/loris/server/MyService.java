@@ -10,8 +10,8 @@ import javax.jws.WebService;
 public interface MyService {
     @WebMethod
     String reverser(String value);
-    
+    @WebMethod
     ArrayList<String> hadoop();
-    
+    @WebMethod
     List<String> hadoopContent();
 }
