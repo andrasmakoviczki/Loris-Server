@@ -11,6 +11,7 @@ import java.util.List;
 import javax.jws.WebService;
 
 import org.elte.hadoop.loris.server.services.HadoopFile;
+import org.elte.hadoop.loris.server.services.LDAExample;
 import org.elte.hadoop.loris.server.services.WordCount2;
 
 @WebService(endpointInterface = "org.elte.hadoop.loris.server.MyService")
@@ -68,6 +69,11 @@ public class MyServiceImpl implements MyService {
     	h.hdfsls(al,out,cont);
     	
     	return cont;
+    }
+    
+    @Override
+    public void LDA() {
+    	LDAExample lda = new LDAExample();
     }
 }
 

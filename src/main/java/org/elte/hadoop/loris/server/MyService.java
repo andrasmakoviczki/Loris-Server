@@ -14,4 +14,6 @@ public interface MyService {
     ArrayList<String> hadoop();
     @WebMethod
     List<String> hadoopContent();
+    @WebMethod
+    void LDA();
 }
