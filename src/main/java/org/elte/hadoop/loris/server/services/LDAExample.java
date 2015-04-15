@@ -1,5 +1,8 @@
 package org.elte.hadoop.loris.server.services;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URL;
 
 import org.apache.spark.SparkConf;
@@ -20,15 +23,32 @@ import scala.collection.Seq;
 
 public class LDAExample {
 	public LDAExample() {
-	try {
+	/*try {
 	String ip = new String("172.31.14.253");
-	String port = new String("7077");	
+	String port = new String("7077");*/
+	
+	try {
+		Process process = new ProcessBuilder(
+				"/usr/bin/hadoop","jar /opt/cloudera/parcels/CDH-5.3.3-1.cdh5.3.3.p0.5/jars/hadoop-mapreduce-examples-2.5.0-cdh5.3.3.jar pi 10 10").start();
+				InputStream is = process.getInputStream();
+				InputStreamReader isr = new InputStreamReader(is);
+				BufferedReader br = new BufferedReader(isr);
+				String line;
+
+				//System.out.printf("Output of running %s is:", Arrays.toString(args));
+
+				while ((line = br.readLine()) != null) {
+				  System.out.println(line);
+				}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
 		
-	SparkConf conf = new SparkConf()
+	/*SparkConf conf = new SparkConf()
 			.setAppName("LDA example")
 			.setMaster("spark://"+ip+":"+port+"");
 
-	JavaSparkContext sc = new JavaSparkContext(conf);
+	JavaSparkContext sc = new JavaSparkContext(conf);*/
 
 	/*String path = "resources/lda_data.txt";
 	
@@ -79,9 +99,9 @@ public class LDAExample {
           System.out.println();
         }*/
         
-	sc.stop();
-		} catch (Exception e) {
+	//sc.stop();
+		/*} catch (Exception e) {
 			e.printStackTrace();
-		}
+		}*/
 }
 }
