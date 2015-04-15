@@ -28,9 +28,11 @@ public class LDAExample {
 	String port = new String("7077");*/
 	
 	try {
+		System.out.println("Start...");
 		Process process = new ProcessBuilder(
 				"/usr/bin/hadoop","jar /opt/cloudera/parcels/CDH-5.3.3-1.cdh5.3.3.p0.5/jars/hadoop-mapreduce-examples-2.5.0-cdh5.3.3.jar pi 10 10").start();
-				InputStream is = process.getInputStream();
+		System.out.println("Finished...");		
+		InputStream is = process.getInputStream();
 				InputStreamReader isr = new InputStreamReader(is);
 				BufferedReader br = new BufferedReader(isr);
 				String line;
@@ -43,7 +45,7 @@ public class LDAExample {
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
-		
+	System.out.println("Out...");
 	/*SparkConf conf = new SparkConf()
 			.setAppName("LDA example")
 			.setMaster("spark://"+ip+":"+port+"");
