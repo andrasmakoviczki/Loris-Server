@@ -29,7 +29,7 @@ public class LDAExample {
 	
 	try {
 		System.out.println("Start...");
-		Process process = new ProcessBuilder("/usr/bin/spark-submit","--master","yarn-client",
+		Process process = new ProcessBuilder("/usr/bin/spark-submit","--master","yarn-cluster",
 				"--class","org.apache.spark.examples.SparkPi",
 				"/opt/cloudera/parcels/CDH-5.3.3-1.cdh5.3.3.p0.5/jars/spark-examples-1.2.0-cdh5.3.3-hadoop2.5.0-cdh5.3.3.jar").start();
 		System.out.println("Finished...");		
