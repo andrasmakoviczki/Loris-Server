@@ -29,8 +29,9 @@ public class LDAExample {
 	
 	try {
 		System.out.println("Start...");
-		Process process = new ProcessBuilder(
-				"/usr/bin/hadoop","jar /opt/cloudera/parcels/CDH-5.3.3-1.cdh5.3.3.p0.5/jars/hadoop-mapreduce-examples-2.5.0-cdh5.3.3.jar pi 10 10").start();
+		Process process = new ProcessBuilder("/usr/bin/spark-submit","--master","yarn-client",
+				"--class","org.apache.spark.examples.SparkPi",
+				"/opt/cloudera/parcels/CDH-5.3.3-1.cdh5.3.3.p0.5/jars/spark-examples-1.2.0-cdh5.3.3-hadoop2.5.0-cdh5.3.3.jar").start();
 		System.out.println("Finished...");		
 		InputStream is = process.getInputStream();
 				InputStreamReader isr = new InputStreamReader(is);
