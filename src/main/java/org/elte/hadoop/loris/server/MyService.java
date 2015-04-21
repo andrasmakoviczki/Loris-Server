@@ -16,4 +16,11 @@ public interface MyService {
     List<String> hadoopContent();
     @WebMethod
     void LDA();
+    @WebMethod
+    void SparkSQL();
+    
+    @WebMethod
+    String GetConfigProperty(String key);
+    @WebMethod
+    void SetConfigProperty(String key, String value);
 }

@@ -8,9 +8,12 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import javax.jws.WebMethod;
 import javax.jws.WebService;
 
+import org.elte.hadoop.loris.server.services.AppConfig;
 import org.elte.hadoop.loris.server.services.HadoopFile;
+import org.elte.hadoop.loris.server.services.HiveAccess;
 import org.elte.hadoop.loris.server.services.LDAExample;
 import org.elte.hadoop.loris.server.services.WordCount2;
 
@@ -71,9 +74,23 @@ public class MyServiceImpl implements MyService {
     	return cont;
     }
     
-    @Override
     public void LDA() {
     	LDAExample lda = new LDAExample();
     }
+    
+    public void SparkSQL(){
+    	HiveAccess hive = new HiveAccess();
+    }
+    
+    public String GetConfigProperty(String key){
+    	AppConfig appConf = new AppConfig();
+    	return appConf.ReadProperty(key);
+    	
+    }
+    public void SetConfigProperty(String key, String value){
+    	AppConfig appConf = new AppConfig();
+    	appConf.ChangeProperty(key, value);
+    }
 }
+
 
