@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rssChannels>
+    <rsschannel>
+        <address>http://index.hu/24ora/rss</address>
+        <description>aaaaaaaaaaaaaaa</description>
+        <feedType>rss_2.0</feedType>
+        <language>hu-HU</language>
+        <lastPublished>2015-04-29T11:37:00+02:00</lastPublished>
+        <size>30</size>
+        <title>Index - 24óra</title>
+    </rsschannel>
+        <rsschannel>
+        <address>http://index.hu/24ora/rss</address>
+        <description>v</description>
+        <feedType>rss_2.0</feedType>
+        <language>hu-HU</language>
+        <lastPublished>2015-04-29T11:37:00+02:00</lastPublished>
+        <size>30</size>
+        <title>Index - 24óra</title>
+    </rsschannel>
+        <rsschannel>
+        <address>http://index.hu/24ora/rss</address>
+        <description>b</description>
+        <feedType>rss_2.0</feedType>
+        <language>hu-HU</language>
+        <lastPublished>2015-04-29T11:37:00+02:00</lastPublished>
+        <size>30</size>
+        <title>Index - 24óra</title>
+    </rsschannel>
+</rssChannels>
